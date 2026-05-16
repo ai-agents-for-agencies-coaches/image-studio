@@ -1,25 +1,38 @@
 # image-studio
 
+![image-studio — turn code, prompts, or URLs into stunning visuals](assets/hero.jpg)
+
 **Canva-quality static images for [Claude Code](https://claude.com/claude-code) — no Canva, no design tool, no AI image model.**
-
-You describe the graphic; Claude writes modern HTML/CSS and renders it to a pixel-perfect PNG with headless Chromium. Full CSS, Tailwind, Google Fonts, gradients, blend modes, SVG, frosted glass — everything a browser can paint.
-
-Built for ad creatives, social posts, carousels, OG images, posters, and blog headers.
 
 ---
 
-## What it's best at: the reverse-template workflow
+## Stop opening Canva to make one more ad.
 
-The killer use case isn't designing from a blank page — it's **cloning a winning ad into a reusable template.**
+You don't have a creative problem. You have a *throughput* problem.
 
-1. You share a screenshot or URL of an ad that's working.
-2. Claude fetches it, samples the exact colors from the pixels, measures the layout, and extracts the photo region.
-3. Claude writes a **parametric HTML template** with variables for the swappable parts — photo, headline, price, city, brand colors.
-4. You get a template you can re-render forever with new inputs.
+The campaign needs a square ad, a portrait, a story, and an OG card. Each one means leaving your terminal, hunting for the right template, nudging text boxes by hand, exporting, re-uploading, and doing it again the moment a headline changes. The design isn't hard. The **forty-minute round trip for a graphic you'll revise twice tomorrow** is what's killing your week.
 
-> "We can now share winning images and get templates out of them."
+And the winners? They're trapped. That ad that's crushing it right now lives as a flattened PNG in someone's drive. You can't version it. You can't hand it to a teammate as a starting point. You can't spin twelve variants for split-testing without rebuilding it from scratch, by hand, in a tool that fights you.
 
-`templates/ad-roofing-financing.html` is a real example, reverse-engineered from a live roofing ad (yellow band + navy tab + big payment number). Swap five variables, render, ship.
+**There's a better way to make statics — and it lives inside the tool you're already in.**
+
+image-studio turns Claude Code into your design department. You describe the graphic in plain language; Claude writes modern HTML/CSS and renders it to a pixel-perfect PNG with headless Chromium. Full CSS, Tailwind, Google Fonts, gradients, blend modes, SVG, frosted glass — **everything a browser can paint, which is everything Canva can and more.** No subscription. No context-switch. No design tax.
+
+Because every creative is *code*, you get things a drag-and-drop editor structurally cannot give you:
+
+- **It's instant and in-flow.** Ask for the ad, get the PNG, iterate in the same breath you're shipping the campaign. No app, no tab, no export dance.
+- **It version-controls.** Every creative is a text file. `git diff` your headline changes. Roll back a bad variant. Review designs in a PR like you review code.
+- **It templatizes your winners.** Share a screenshot or URL of an ad that's working — Claude samples the exact colors from the pixels, measures the layout, extracts the photo region, and hands you back a **parametric template with swappable variables** (photo, headline, price, city, brand colors). The winner stops being a dead PNG and becomes an asset you re-render forever.
+- **It scales sideways.** One template → fifty on-brand variants from a loop. Carousels, localized city ads, A/B headline sets — generated, not hand-built.
+- **It doesn't look generic.** Ships with distinct aesthetic systems — editorial, brutalist, direct-response, photo-luxury, Swiss — so your output doesn't wear the same house style as everyone else's.
+
+> *"We can now share winning images and get templates out of them."*
+
+That's the unlock. `templates/ad-roofing-financing.html` in this repo is a real example — reverse-engineered from a live roofing ad (yellow band, navy tab, big payment number). Swap five variables, render, ship the next one in seconds.
+
+It's MIT-licensed and free. Cloning it costs you one command and about 300MB of Chromium. The next ad you would have built by hand in Canva is the last one you'll need to.
+
+**Install it, then just ask Claude for the graphic. ⬇️**
 
 ---
 
