@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; font-weight: 300; }
+  .display { font-family: 'Cormorant Garamond', serif; font-weight: 300; letter-spacing: 0.01em; line-height: 1.02; }
+  .italic-display { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; }
+</style>
+</head>
+<body>
+  <div class="relative w-[1080px] h-[1080px] overflow-hidden bg-neutral-900 text-white">
+
+    <!-- Full-bleed photo (botanical / atmospheric — Unsplash) -->
+    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1400&q=90"
+         class="absolute inset-0 w-full h-full object-cover"
+         style="filter: brightness(0.85) saturate(0.85);" />
+
+    <!-- Subtle vignette -->
+    <div class="absolute inset-0"
+         style="background: radial-gradient(120% 80% at 50% 50%, transparent 0%, transparent 50%, rgba(0,0,0,0.5) 100%);"></div>
+
+    <!-- Top: brand mark, letter-spaced -->
+    <div class="absolute top-16 left-0 right-0 flex justify-center">
+      <div class="text-[10px] font-normal tracking-[0.65em] uppercase text-white/85">
+        A C M E &nbsp;&nbsp; C O .
+      </div>
+    </div>
+
+    <!-- Bottom: whisper headline + tiny details -->
+    <div class="absolute bottom-20 left-0 right-0 flex flex-col items-center text-center px-20">
+      <div class="display text-[56px] mb-3" style="color: #f4ede1;">
+        A studied <span class="italic-display">stillness.</span>
+      </div>
+      <div class="text-[11px] font-normal tracking-[0.5em] uppercase text-white/70 mb-10">
+        SPRING COLLECTION — NOW AVAILABLE
+      </div>
+      <div class="h-px w-12 bg-white/40 mb-6"></div>
+      <div class="text-[10px] tracking-[0.4em] uppercase text-white/55">
+        DISCOVER
+      </div>
+    </div>
+  </div>
+</body>
+</html>

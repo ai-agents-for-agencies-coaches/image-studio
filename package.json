@@ -1,0 +1,15 @@
+{
+  "name": "image-studio",
+  "version": "1.0.0",
+  "description": "Canva-quality static image generation for Claude Code — write HTML/CSS, render with headless Chromium.",
+  "license": "MIT",
+  "bin": {
+    "image-studio": "render.js"
+  },
+  "scripts": {
+    "postinstall": "playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}

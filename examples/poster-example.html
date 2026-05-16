@@ -1,0 +1,94 @@
+<!doctype html>
+<!--
+  TEMPLATE: poster-hero
+  Use case: Magazine-style hero image / landing page hero / poster
+  Render: node render.js --input poster-hero.html --output out.png --width 1920 --height 1080 --scale 2
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..900,0..100&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+  .display { font-family: 'Fraunces', serif; font-variation-settings: "SOFT" 100; letter-spacing: -0.04em; line-height: 0.9; }
+</style>
+</head>
+<body>
+  <div class="relative w-[1920px] h-[1080px] overflow-hidden text-white"
+       style="background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #2a1f3d 100%);">
+
+    <!-- Large accent -->
+    <div class="absolute -top-72 -right-40 w-[1200px] h-[1200px] rounded-full"
+         style="background: radial-gradient(circle, rgba(120,80,255,0.4) 0%, rgba(120,80,255,0) 65%); filter: blur(20px);"></div>
+    <div class="absolute -bottom-60 -left-40 w-[1000px] h-[1000px] rounded-full"
+         style="background: radial-gradient(circle, rgba(255,90,140,0.3) 0%, rgba(255,90,140,0) 70%); filter: blur(30px);"></div>
+
+    <!-- Grid -->
+    <div class="absolute inset-0 opacity-[0.04]"
+         style="background-image: linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px); background-size: 80px 80px;"></div>
+
+    <div class="relative h-full grid grid-cols-12 gap-12 p-24">
+      <!-- Left: copy -->
+      <div class="col-span-7 flex flex-col justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-2 h-12" style="background: linear-gradient(180deg, #a78bfa, #ec4899);"></div>
+          <div class="text-sm font-bold tracking-[0.3em] uppercase text-white/70">Acme Co.</div>
+        </div>
+
+        <div>
+          <div class="text-violet-300 text-base font-bold tracking-[0.25em] uppercase mb-6">Eyebrow label</div>
+          <h1 class="display text-white text-[160px]">
+            Landscape hero<br/>
+            <span style="font-style: italic; background: linear-gradient(90deg, #c4b5fd, #f9a8d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">or poster layout.</span>
+          </h1>
+          <p class="mt-10 text-2xl text-white/70 max-w-[800px] leading-relaxed">
+            Two-column grid: long-form copy on the left, a complementary visual card on the right. Stats block in the card is editable.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-6">
+          <div class="inline-flex items-center gap-4 text-neutral-950 rounded-full pl-8 pr-6 py-5"
+               style="background: linear-gradient(90deg, #c4b5fd, #f9a8d4);">
+            <span class="text-xl font-bold">Primary action</span>
+            <span class="w-10 h-10 rounded-full bg-neutral-950 text-white flex items-center justify-center">→</span>
+          </div>
+          <div class="text-white/60 text-sm">
+            <div class="font-semibold text-white">No credit card required</div>
+            <div>Free for solo founders</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: visual card -->
+      <div class="col-span-5 flex items-center">
+        <div class="w-full aspect-[4/5] rounded-3xl p-10 relative overflow-hidden border border-white/15"
+             style="background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(20px);">
+          <div class="absolute -top-20 -right-20 w-[300px] h-[300px] rounded-full"
+               style="background: radial-gradient(circle, rgba(196,181,253,0.5) 0%, rgba(196,181,253,0) 70%);"></div>
+          <div class="relative h-full flex flex-col justify-between">
+            <div>
+              <div class="text-xs font-bold tracking-widest uppercase text-violet-300 mb-3">Live preview</div>
+              <div class="display text-white text-5xl">"It just works."</div>
+            </div>
+            <div class="space-y-3">
+              <div class="flex justify-between text-sm">
+                <span class="text-white/60">Pages indexed</span>
+                <span class="text-white font-bold">49,217</span>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span class="text-white/60">AI crawlers detected</span>
+                <span class="text-white font-bold">10 / 10</span>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span class="text-white/60">Citation lift</span>
+                <span class="text-emerald-300 font-bold">+312%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

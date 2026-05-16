@@ -1,0 +1,56 @@
+<!doctype html>
+<!--
+  TEMPLATE: og-1200x630
+  Use case: Open Graph / Twitter card / blog social preview
+  Render: node render.js --input og-1200x630.html --output out.png --width 1200 --height 630 --scale 2
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+  .display { font-family: 'DM Serif Display', serif; letter-spacing: -0.02em; line-height: 1.0; }
+</style>
+</head>
+<body>
+  <div class="relative w-[1200px] h-[630px] overflow-hidden bg-neutral-950 text-white">
+
+    <!-- Subtle grid -->
+    <div class="absolute inset-0 opacity-[0.05]"
+         style="background-image: linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px); background-size: 60px 60px;"></div>
+
+    <!-- Accent corner gradient -->
+    <div class="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full"
+         style="background: radial-gradient(circle, rgba(99,102,241,0.45) 0%, rgba(99,102,241,0) 70%); filter: blur(20px);"></div>
+    <div class="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full"
+         style="background: radial-gradient(circle, rgba(236,72,153,0.35) 0%, rgba(236,72,153,0) 70%); filter: blur(20px);"></div>
+
+    <div class="relative h-full flex flex-col p-16">
+      <!-- Top: site mark -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold"
+             style="background: linear-gradient(135deg, #6366f1, #ec4899);">P1</div>
+        <div class="text-sm font-semibold tracking-wider uppercase text-white/80">Acme</div>
+      </div>
+
+      <!-- Middle: title -->
+      <div class="flex-1 flex flex-col justify-center">
+        <div class="text-indigo-300 text-sm font-semibold tracking-[0.2em] uppercase mb-4">Category label</div>
+        <h1 class="display text-white text-[64px] max-w-[1000px]">
+          A representative article title that runs two or three lines at the actual font size.
+        </h1>
+      </div>
+
+      <!-- Bottom: byline + url -->
+      <div class="flex items-end justify-between">
+        <div class="text-white/70 text-base">
+          <span class="font-semibold text-white">Author Name</span> · 8 min read
+        </div>
+        <div class="text-white/50 text-sm font-medium tracking-wider">acme.example.com</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

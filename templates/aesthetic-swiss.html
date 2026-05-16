@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Inter', system-ui, sans-serif; font-feature-settings: 'ss01' on, 'cv11' on; }
+  .helvetica-style { letter-spacing: -0.04em; line-height: 0.9; font-weight: 900; }
+</style>
+</head>
+<body>
+  <div class="relative w-[1080px] h-[1080px] overflow-hidden p-20"
+       style="background: #ffffff; color: #0a0a0a;">
+
+    <!-- Visible thin grid -->
+    <div class="absolute inset-20 grid grid-cols-6 gap-0 pointer-events-none">
+      <div class="border-l" style="border-color: #d4d4d4;"></div>
+      <div class="border-l" style="border-color: #d4d4d4;"></div>
+      <div class="border-l" style="border-color: #d4d4d4;"></div>
+      <div class="border-l" style="border-color: #d4d4d4;"></div>
+      <div class="border-l" style="border-color: #d4d4d4;"></div>
+      <div class="border-l border-r" style="border-color: #d4d4d4;"></div>
+    </div>
+
+    <div class="relative h-full grid grid-cols-6 gap-0">
+
+      <!-- Top-left: meta -->
+      <div class="col-span-2 row-span-1">
+        <div class="text-[10px] font-bold tracking-[0.25em] uppercase mb-2" style="color: #0a0a0a;">№ 017 / Swiss Grid</div>
+        <div class="text-[10px] tracking-widest uppercase" style="color: #737373;">14 May 2026</div>
+      </div>
+
+      <!-- Top-right: small accent block -->
+      <div class="col-start-6 col-span-1 flex justify-end">
+        <div class="w-3 h-3 rounded-full" style="background: #d62828;"></div>
+      </div>
+
+      <!-- Huge focal number -->
+      <div class="col-span-6 flex-1 flex flex-col justify-center -mt-20">
+        <div class="helvetica-style text-[480px]" style="color: #0a0a0a;">
+          <span>0</span><span style="color: #d62828;">1</span>
+        </div>
+      </div>
+
+      <!-- Bottom-left: title -->
+      <div class="col-span-4 self-end">
+        <div class="text-[11px] font-bold tracking-[0.25em] uppercase mb-3" style="color: #d62828;">Edition One</div>
+        <div class="text-3xl font-bold" style="letter-spacing: -0.02em;">
+          One idea, expressed with absolute clarity.
+        </div>
+      </div>
+
+      <!-- Bottom-right: details + page no -->
+      <div class="col-span-2 self-end pl-6">
+        <div class="text-[10px] tracking-widest uppercase mb-3" style="color: #737373;">Description</div>
+        <p class="text-xs leading-snug mb-6" style="color: #404040;">
+          Strict 6-column grid, single accent (vermillion red), Inter as Helvetica stand-in. White space is the design.
+        </p>
+        <div class="text-[10px] font-bold tracking-[0.25em] uppercase" style="color: #0a0a0a;">Page 01 / 01</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

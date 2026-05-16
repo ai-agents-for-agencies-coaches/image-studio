@@ -1,0 +1,71 @@
+<!doctype html>
+<!--
+  TEMPLATE: ad-square-1080
+  Use case: FB/IG square feed ad, problem-aware homeowner hook
+  Render: node render.js --input ad-square-1080.html --output out.png --width 1080 --height 1080 --scale 2
+  Edit: {{HEADLINE}}, {{SUBHEAD}}, {{CTA}}, {{BRAND}}, accent color, background image
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  .display { font-family: 'Fraunces', Georgia, serif; font-optical-sizing: auto; letter-spacing: -0.02em; line-height: 0.95; }
+  .grain { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"); }
+</style>
+</head>
+<body>
+  <div class="relative w-[1080px] h-[1080px] overflow-hidden text-white"
+       style="background: radial-gradient(120% 80% at 80% 10%, #2a1b0d 0%, #100804 55%, #050201 100%);">
+
+    <!-- Layered warm light -->
+    <div class="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full"
+         style="background: radial-gradient(circle, rgba(255,170,80,0.35) 0%, rgba(255,140,40,0) 65%); filter: blur(20px);"></div>
+    <div class="absolute -bottom-32 -left-32 w-[600px] h-[600px] rounded-full"
+         style="background: radial-gradient(circle, rgba(255,90,40,0.25) 0%, rgba(255,90,40,0) 70%); filter: blur(30px);"></div>
+
+    <!-- Grain overlay -->
+    <div class="absolute inset-0 grain opacity-30 mix-blend-overlay pointer-events-none"></div>
+
+    <!-- Content -->
+    <div class="relative h-full flex flex-col p-20">
+
+      <!-- Top: brand + eyebrow -->
+      <div class="flex items-center justify-between">
+        <div class="text-sm font-semibold tracking-[0.25em] uppercase text-orange-300/90">{{BRAND}}</div>
+        <div class="text-xs font-medium tracking-widest uppercase text-white/50 border border-white/20 rounded-full px-4 py-2">Licensed &amp; Insured</div>
+      </div>
+
+      <!-- Middle: headline -->
+      <div class="flex-1 flex flex-col justify-center">
+        <div class="text-orange-300 text-base font-semibold tracking-widest uppercase mb-6">A note for homeowners</div>
+        <h1 class="display text-white" style="font-size: 132px; font-weight: 700;">
+          {{HEADLINE_LINE_1}}<br/>
+          <span style="font-style: italic; color: #ffb37a;">{{HEADLINE_LINE_2}}</span>
+        </h1>
+        <p class="mt-10 text-2xl text-white/75 leading-relaxed max-w-[800px]">
+          {{SUBHEAD}}
+        </p>
+      </div>
+
+      <!-- Bottom: CTA -->
+      <div class="flex items-end justify-between">
+        <div class="inline-flex items-center gap-4 bg-orange-400 text-neutral-950 rounded-full pl-8 pr-6 py-5">
+          <span class="text-xl font-bold tracking-tight">{{CTA}}</span>
+          <span class="w-10 h-10 rounded-full bg-neutral-950 text-orange-400 flex items-center justify-center text-xl">→</span>
+        </div>
+        <div class="text-right">
+          <div class="text-white/50 text-sm uppercase tracking-widest">★★★★★ 4.9</div>
+          <div class="text-white/40 text-xs mt-1">200+ homeowners served</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

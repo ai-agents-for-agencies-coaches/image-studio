@@ -1,0 +1,95 @@
+<!doctype html>
+<!--
+  TEMPLATE: ad-roofing-financing
+  Direct-response home services format: photo on top, yellow band on bottom,
+  navy tab with headline straddling the seam, big payment number as focal point.
+
+  Render: node render.js --input ad-roofing-financing.html --output out.png --width 1080 --height 1080 --scale 2
+
+  Variables to edit:
+    BG_IMAGE   — file:// path or URL of the home photo (1080 wide)
+    HEADLINE   — text inside the navy tab (yellow)
+    SUB_LINE_1 — "PAYMENTS"   (white, on yellow band)
+    SUB_LINE_2 — "AS LOW AS"  (white, on yellow band)
+    PRICE      — "$129/MO"    (navy, on yellow band, big)
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --yellow: #FEB103;
+    --navy: #1B2A5E;
+    --white: #ffffff;
+  }
+  html, body { margin: 0; padding: 0; background: #000; }
+  .canvas { position: relative; width: 1080px; height: 1080px; overflow: hidden; }
+  .photo {
+    position: absolute; inset: 0;
+    background-image: url('../assets/sample-house.jpg');
+    background-size: 1080px 783px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-color: #cce6ff; /* fallback for any gap */
+  }
+  .yellow-band {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 305px;
+    background: var(--yellow);
+  }
+  .navy-tab {
+    position: absolute; left: 80px; right: 80px; top: 670px; height: 110px;
+    background: var(--navy); border-radius: 18px;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 2;
+  }
+  .display {
+    font-family: 'Anton', 'Oswald', sans-serif;
+    font-weight: 400; letter-spacing: 0.005em; line-height: 1;
+    text-transform: uppercase;
+    transform: skewX(-9deg);
+  }
+  .headline {
+    color: var(--yellow);
+    font-size: 64px;
+  }
+  .bottom-row {
+    position: absolute; left: 60px; right: 60px; bottom: 50px;
+    display: flex; align-items: center; gap: 0;
+    z-index: 3;
+  }
+  .sub {
+    color: var(--white);
+    font-size: 72px; line-height: 0.88;
+    text-align: left;
+    margin-right: 24px;
+    flex: 0 0 auto;
+  }
+  .price {
+    color: var(--navy);
+    font-size: 192px;
+    line-height: 1;
+    text-shadow:
+      0 6px 0 rgba(0,0,0,0.18),
+      0 12px 24px rgba(0,0,0,0.18);
+    flex: 1 1 auto;
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="photo"></div>
+    <div class="yellow-band"></div>
+    <div class="navy-tab">
+      <div class="display headline">NEED YOUR ROOF REPLACED?</div>
+    </div>
+    <div class="bottom-row">
+      <div class="display sub">
+        PAYMENTS<br/>AS LOW AS
+      </div>
+      <div class="display price">$129/MO</div>
+    </div>
+  </div>
+</body>
+</html>

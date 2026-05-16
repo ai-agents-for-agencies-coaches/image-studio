@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Archivo+Black&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'IBM Plex Mono', monospace; }
+  .heavy { font-family: 'Archivo Black', sans-serif; letter-spacing: -0.02em; line-height: 0.85; text-transform: uppercase; }
+</style>
+</head>
+<body>
+  <div class="relative w-[1080px] h-[1080px] overflow-hidden p-12"
+       style="background: #ffffff; color: #000000;">
+
+    <!-- Hard black grid bands -->
+    <div class="absolute top-0 left-0 w-full h-8" style="background: #000;"></div>
+    <div class="absolute bottom-0 left-0 w-full h-8" style="background: #000;"></div>
+
+    <div class="relative h-full flex flex-col justify-between pt-8 pb-8">
+
+      <!-- Top metadata bar -->
+      <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-widest border-b-4 border-black pb-3">
+        <span>FILE / 037 — BRUTALIST</span>
+        <span style="color: #e63946;">● LIVE</span>
+        <span>05.14.26 / 21:46</span>
+      </div>
+
+      <!-- Asymmetric block -->
+      <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-3 border-4 border-black p-4 mt-4 text-[10px] uppercase leading-snug">
+          NO<br/>FRILLS<br/>NO<br/>GRADIENTS<br/>NO<br/>BLUR
+        </div>
+        <div class="col-span-9 pl-2">
+          <div class="heavy" style="font-size: 220px; color: #000;">
+            BIG
+          </div>
+          <div class="heavy" style="font-size: 220px; color: #e63946; margin-top: -40px;">
+            LOUD
+          </div>
+          <div class="heavy" style="font-size: 220px; color: #000; margin-top: -40px;">
+            UGLY.
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom: ratings + CTA -->
+      <div class="grid grid-cols-12 gap-4 items-end">
+        <div class="col-span-7">
+          <div class="text-[11px] font-bold uppercase tracking-widest mb-2">// DESCRIPTION</div>
+          <p class="text-[14px] leading-snug max-w-[480px]">
+            High-contrast monospace. Heavy borders. Visible grid. The opposite of "polished SaaS." Useful for editorial, manifestos, contrarian brands.
+          </p>
+        </div>
+        <div class="col-span-5">
+          <a class="block w-full border-4 border-black bg-black text-white text-center py-5 text-base font-bold uppercase tracking-widest"
+             style="text-decoration: none;">
+            [ &nbsp;PRIMARY ACTION&nbsp; ▸ ]
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,900&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; }
+  .display { font-family: 'Fraunces', serif; letter-spacing: -0.025em; line-height: 0.95; }
+  .italic-display { font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; }
+</style>
+</head>
+<body>
+  <div class="relative w-[1080px] h-[1080px] overflow-hidden p-24"
+       style="background: #f1ebde; color: #1a1612;">
+
+    <!-- Top masthead -->
+    <div class="flex items-center justify-between pb-6 border-b" style="border-color: #1a1612;">
+      <div class="text-xs font-medium tracking-[0.35em] uppercase" style="color: #1a1612;">The Quarterly</div>
+      <div class="text-xs font-medium tracking-wider uppercase" style="color: #6b5b4a;">Vol. XII · Spring</div>
+    </div>
+
+    <!-- Body -->
+    <div class="h-[calc(100%-180px)] flex flex-col justify-between pt-20">
+      <div>
+        <div class="text-xs font-medium tracking-[0.35em] uppercase mb-8" style="color: #8b3a1f;">Essay № 04</div>
+        <h1 class="display text-[120px]" style="color: #1a1612;">
+          On the<br/>
+          <span class="italic-display" style="color: #8b3a1f;">quieter</span> hours<br/>
+          of the day.
+        </h1>
+      </div>
+
+      <div class="flex items-end justify-between pt-12">
+        <p class="text-base leading-relaxed max-w-[560px]" style="color: #4a3f30;">
+          A thousand-word meditation on the difference between solitude and loneliness, and why the former requires practice. By the editors of The Quarterly.
+        </p>
+        <div class="text-right">
+          <div class="italic-display text-3xl" style="color: #1a1612;">Read inside</div>
+          <div class="text-xs tracking-widest uppercase mt-1" style="color: #6b5b4a;">Page 42</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer rule -->
+    <div class="absolute bottom-24 left-24 right-24 border-t" style="border-color: #1a1612;"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;700&family=Inter:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; }
+  .impact { font-family: 'Anton', sans-serif; letter-spacing: 0; line-height: 0.88; text-transform: uppercase; }
+  .heavy-sans { font-family: 'Oswald', sans-serif; }
+</style>
+</head>
+<body>
+  <div class="relative w-[1080px] h-[1080px] overflow-hidden"
+       style="background: #ffd60a; color: #0d0d0d;">
+
+    <!-- Sun-ray burst behind -->
+    <svg class="absolute inset-0 w-full h-full opacity-25" viewBox="0 0 1080 1080" preserveAspectRatio="xMidYMid slice">
+      <g transform="translate(540,540)" fill="#0d0d0d">
+        <g>
+          <polygon points="0,0 60,-540 -60,-540" />
+          <polygon points="0,0 60,-540 -60,-540" transform="rotate(30)" />
+          <polygon points="0,0 60,-540 -60,-540" transform="rotate(60)" />
+          <polygon points="0,0 60,-540 -60,-540" transform="rotate(90)" />
+          <polygon points="0,0 60,-540 -60,-540" transform="rotate(120)" />
+          <polygon points="0,0 60,-540 -60,-540" transform="rotate(150)" />
+          <polygon points="0,0 60,-540 -60,-540" transform="rotate(180)" />
+          <polygon points="0,0 60,-540 -60,-540" transform="rotate(210)" />
+          <polygon points="0,0 60,-540 -60,-540" transform="rotate(240)" />
+          <polygon points="0,0 60,-540 -60,-540" transform="rotate(270)" />
+          <polygon points="0,0 60,-540 -60,-540" transform="rotate(300)" />
+          <polygon points="0,0 60,-540 -60,-540" transform="rotate(330)" />
+        </g>
+      </g>
+    </svg>
+
+    <!-- Diagonal banner top -->
+    <div class="absolute top-12 -left-12 right-0 transform -rotate-3 z-10">
+      <div class="heavy-sans inline-block px-8 py-3 text-white text-sm font-bold tracking-widest uppercase shadow-lg"
+           style="background: #e63946;">
+        ★  ATTENTION HOMEOWNERS  ★  LIMITED TIME  ★
+      </div>
+    </div>
+
+    <!-- Main copy -->
+    <div class="relative h-full flex flex-col justify-center items-center text-center px-16 z-20">
+
+      <div class="impact text-[110px] mb-4" style="color: #0d0d0d;">
+        STOP!
+      </div>
+
+      <div class="impact text-[160px] mb-8" style="color: #0d0d0d; text-shadow: 6px 6px 0 #e63946;">
+        DON'T PAY<br/>
+        FULL PRICE.
+      </div>
+
+      <p class="text-2xl font-bold uppercase tracking-wider mb-10 max-w-[800px]" style="color: #0d0d0d;">
+        Direct-response layout. Yellow background, drop-shadow display type, banner overlay, big-shouty CTA. Built for clicks, not for design awards.
+      </p>
+
+      <!-- CTA -->
+      <div class="inline-block bg-black text-white px-12 py-6 transform -rotate-1 shadow-xl">
+        <div class="impact text-5xl text-yellow-300">CLAIM YOUR OFFER →</div>
+      </div>
+
+      <div class="mt-6 text-sm font-bold uppercase tracking-widest" style="color: #0d0d0d;">
+        Hurry — offer ends Friday · No obligation · 100% free
+      </div>
+    </div>
+
+    <!-- Bottom strip -->
+    <div class="absolute bottom-0 left-0 right-0 py-4 text-center text-xs font-bold uppercase tracking-[0.3em] text-white"
+         style="background: #0d0d0d;">
+      ACME CO. · 1-800-555-0199 · WWW.ACME.EXAMPLE
+    </div>
+  </div>
+</body>
+</html>

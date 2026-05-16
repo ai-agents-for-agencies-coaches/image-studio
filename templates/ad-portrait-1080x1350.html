@@ -1,0 +1,58 @@
+<!doctype html>
+<!--
+  TEMPLATE: ad-portrait-1080x1350
+  Use case: Image-led FB/IG portrait ad with overlay copy
+  Render: node render.js --input ad-portrait-1080x1350.html --output out.png --width 1080 --height 1350 --scale 2
+  Edit: {{HEADLINE}}, {{SUBHEAD}}, {{CTA}}, {{BRAND}}, swap the IMAGE_URL for your hero photo
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; font-family: 'Manrope', sans-serif; }
+  .display { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.03em; line-height: 0.92; }
+</style>
+</head>
+<body>
+  <div class="relative w-[1080px] h-[1350px] overflow-hidden bg-neutral-950 text-white">
+
+    <!-- Hero image (replace with real photo path or Unsplash URL) -->
+    <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=1400&q=85"
+         alt="" class="absolute inset-0 w-full h-full object-cover" />
+
+    <!-- Bottom gradient scrim for legibility -->
+    <div class="absolute inset-0"
+         style="background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.0) 35%, rgba(10,10,12,0.85) 75%, rgba(10,10,12,0.98) 100%);"></div>
+
+    <!-- Top eyebrow chip -->
+    <div class="absolute top-12 left-12 right-12 flex items-center justify-between">
+      <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2 text-xs font-semibold tracking-[0.2em] uppercase">{{BRAND}}</div>
+      <div class="bg-white text-neutral-900 rounded-full px-4 py-2 text-xs font-bold tracking-wider uppercase">Free Estimates</div>
+    </div>
+
+    <!-- Bottom content -->
+    <div class="absolute left-12 right-12 bottom-12">
+      <div class="text-orange-300 text-sm font-bold tracking-[0.25em] uppercase mb-5">For homeowners in {{CITY}}</div>
+      <h1 class="display text-white text-[96px] font-extrabold mb-6">
+        {{HEADLINE_LINE_1}}<br/>
+        <span class="text-orange-300">{{HEADLINE_LINE_2}}</span>
+      </h1>
+      <p class="text-white/80 text-xl leading-snug max-w-[850px] mb-10">
+        {{SUBHEAD}}
+      </p>
+      <div class="flex items-center gap-5">
+        <div class="inline-flex items-center gap-3 bg-orange-400 text-neutral-950 rounded-full pl-7 pr-5 py-4">
+          <span class="text-lg font-bold">{{CTA}}</span>
+          <span class="w-9 h-9 rounded-full bg-neutral-950 text-orange-400 flex items-center justify-center">→</span>
+        </div>
+        <div class="text-white/70 text-sm">
+          <div class="font-bold">★★★★★ 4.9 / 5</div>
+          <div class="text-white/50">Trusted by 200+ homeowners</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
