@@ -23,6 +23,19 @@ Produce **high-quality static images** by writing modern HTML/CSS, then renderin
 - Video → use `remotion-video-production` or `animation-studio`
 - Quick text-only PNGs → PIL via `meta-ad-creative-generator` is fine
 
+## Brand fidelity (DESIGN.md) — check FIRST
+
+Before any client creative, run the pre-flight check. If a `DESIGN.md` exists
+(project root, or `~/claude_work/brand-kits/<slug>/`), it is the source of
+truth — load its tokens into the template `:root` vars (`--accent`, `--ink`,
+`--bg`, `--mute`) and fonts; do **not** hardcode or sample new colors. If it
+has unresolved `TODO: VERIFY` or lint errors, stop and resolve with the user.
+If none exists, use the [`brand-kit`](https://github.com/ai-agents-for-agencies-coaches/brand-kit)
+skill to extract + verify one — **never guess a client's brand**. (Generic/demo
+work with no real client: use neutral placeholders, don't invent a brand.)
+The reverse-template color-sampling step *is* brand-kit's extraction — sample
+into a DESIGN.md, not into a one-off template.
+
 ## Workflow
 
 1. **Copy the closest template** from `templates/` into your project's output directory.
